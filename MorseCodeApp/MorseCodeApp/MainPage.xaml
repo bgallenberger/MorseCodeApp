@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MorseCodeApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text=
+               "A  .-    B  -...    C  -.-.    D  -..    E   .     F  ..-.     G  --.      H  .... 
+                I  ..     J  .---    K  -.-     L  .-..   M   --    N  -.       O  ---      P  .--. 
+                Q  --.-  R  .-.     S  ...     T  -      U   ..-   V  ...-     W  .--      X  -..- 
+                Y  -.--  Z  --.." 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"/>
+        
+        <Label Text="Enter Morse Code!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+           x:Name="output"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Dot"
+                 HorizontalOptions="FillAndExpand"
+                 HeightRequest="100"
+                 Clicked="OnDotClicked" />
+            <Button Text="Dash"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="100"
+                Clicked="OnDashClicked" />
+        </StackLayout>
+        <Button Text="Space"
+                WidthRequest="50" HeightRequest="100"
+                Clicked="OnSpaceClicked" />
+        
+    </StackLayout>
+
+</ContentPage>
